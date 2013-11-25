@@ -1,0 +1,71 @@
+
+<div class="row" data-ng-controller="SubjectsController" data-ng-init="findOneSubject()">
+    <div class="control-group">
+        <a href="#/subjects">View all subjects</a>
+    </div>
+<div class="col-md-4">
+    <form class="form form-horizontal">
+        <div class="form-group">
+            <label for="name">Name</label>
+
+            <input class="form-control" type="text" data-ng-model="subject.name" id="name" placeholder="Name">
+
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+
+
+            <input  class="form-control" type="text" data-ng-model="subject.location" id="location" placeholder="Location">
+
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+
+            <input class="form-control"  type="tel" data-ng-model="subject.phone" id="phone" placeholder="Phone">
+
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+
+
+            <input class="form-control"  type="email" data-ng-model="subject.email" id="email" placeholder="Email">
+
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+
+
+            <input class="form-control"  type="number" data-ng-model="subject.age" id="age" placeholder="Age">
+
+        </div>
+        <div class="form-group">
+            <label for="organization">Organization</label>
+
+
+            <input class="form-control"  type="text" data-ng-model="subject.organization" id="organization" placeholder="Organization">
+
+        </div>
+        <div class="form-group">
+            <label for="occupation">Occupation</label>
+
+
+            <input class="form-control" type="text" data-ng-model="subject.occupation" id="occupation" placeholder="occupation">
+        </div>
+        <div class="control-group">
+            <button class="btn btn-primary" data-ng-click="createSubject()" data-ng-show="!subjectId"><span class="glyphicon glyphicon-star"></span> Create Subject</button>
+        </div>
+
+</form>
+
+</div>
+    <div class="col-md-8">
+        <label for="observations">Observation Notes </label>
+        <div class="form-group">
+        <textarea type="text" class="form-control input-xxlarge" rows="5" data-ng-model="subject.observations" name="observations" id="observations"></textarea>
+        </div>
+        <div class="control-group">
+            <a class="btn" href="#/subjects">View all subjects</a>
+        </div>
+    </div>
+
+    </div>

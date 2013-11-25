@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="fantasyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My AngularJS App</title>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/docs/dist/css/bootstrap.min.css" />
+   <!-- <link rel="stylesheet" href="lib/bootstrap/docs/dist/css/bootstrap-theme.min.css" />-->
+  </head>
+  <body>
+
+    <header data-ng-include="'views/header.html'" ></header>
+
+    <section class="content">
+      <section class="container">
+        <div ng-view></div>
+      </section>
+    </section>
+
+    <script src="http://static.firebase.com/v0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/docs/dist/js/bootstrap.min.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-fire/angularFire.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/controllers/headercontroller.js"></script>
+    <script src="js/controllers/signincontroller.js"></script>
+    <script src="js/controllers/signupcontroller.js"></script>
+  <!--  <script src="js/controllers/nflcontroller.js"></script>
+    <script src="js/controllers/leaguescontroller.js"></script>
+    <script src="js/controllers/playerscontroller.js"></script>
+    <script src="js/controllers/fantasyteamscontroller.js"></script>-->
+    <script src="js/controllers/subjectscontroller.js"></script>
+    <script src="js/controllers/questionscontroller.js"></script>
+
+    <script src="js/services/loginservice.js"></script>
+    <script src="js/services/profilecreator.js"></script>
+    <!--<script src="js/services/nflservice.js"></script>-->
+    <script src="js/services/firerefservice.js"></script>
+   <!-- <script src="js/services/leagueservice.js"></script>
+    <script src="js/services/playerservice.js"></script>
+    <script src="js/services/fantasyteamservice.js"></script>-->
+    <script src="js/services/subjectservice.js"></script>
+    <script src="js/services/questionservice.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+
+<div data-ng-controller="SubjectsController" data-ng-init="findSubjects()">
+    <h2>Subjects</h2>
+    <h3>All Subjects</h3>
+
+    <table class="table table-bordered table-responsive">
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Organization</th>
+            <th></th>
+
+        </tr>
+        <tr data-ng-repeat="subject in subjects">
+            <td><a href="#/subjects/{{ subject.$id }}">{{subject.name}}</a></td>
+            <td>{{ subject.phone }}</td>
+            <td><a href="mailto:{{ subject.email }}"> {{ subject.email}}</a></td>
+            <td>{{ subject.organization }}</td>
+            <td><a class="btn btn-primary btn-sm" href="#/subjects/{{ subject.$id }}/edit">Edit</a> <a class="btn btn-sm btn-default" data-ng-click="removeSubject('{{ subject.$id }}')" >Remove</a></td>
+        </tr>
+    </table>
+ <!--   <ul class="unstyled">
+        <li data-ng-repeat="subject in subjects">
+            <a href="#/subjects/{{ subject.$id }}">{{subject.name}}</a>
+            (<a href="#/subjects/{{ subject.$id }}/edit">Edit</a>)
+            (<a href="" data-ng-click="removeSubject('{{ subject.$id }}')" >Remove</a>)
+        </li>
+    </ul>-->
+    <br>
+    <a href="#/subjects/create">Create a new subject</a>
+</div>
