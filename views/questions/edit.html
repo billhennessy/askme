@@ -1,35 +1,36 @@
 <div data-ng-controller="QuestionsController" data-ng-init="findOneQuestion()">
-
-    <form class="form-horizontal">
-        <div class="control-group">
+<div class="row">
+    <form class="form-horizontal  col-lg-8">
+        <div class="control-group" >
             <label class="control-label" for="text">Text</label>
             <div class="controls">
                 <input type="text" class="form-control input-xlarge" data-ng-model="question.text" id="text" placeholder="Text">
             </div>
         </div>
-        <div class="control-group">
+        <div class="control-group col-lg-8" >
             <label class="control-label" for="options">Number of options</label>
             <div class="controls">
                 <input type="number" class="form-control input-mini" data-ng-model="question.options" id="options" placeholder="Number of options">
             </div>
 
         </div>
-        <div class="control-group">
+        <div class="control-group col-lg-8">
             <label class="control-label" for="reverse">Reverse scoring?</label>
-            <div class="controls">
-                <input type="checkbox" class="form-control checkbox" data-ng-model="question.reverse" id="reverse" value="false">
-            </div>
+
+                <input type="checkbox" class="form-control checkbox pull-left" data-ng-model="question.reverse" id="reverse">
+
 
         </div>
-        <div class="control-group">
+        <div class="control-group col-lg-8 ">
             <div class="controls">
                 <button data-ng-click="createQuestion()" data-ng-show="!questionId">Create Question</button>
             </div>
         </div>
-        <div class="control-group">
+        <div class="control-group col-lg-8 ">
             <div class="controls">
                 <a href="#/questions">View all questions</a>
             </div>
         </div>
     </form>
+</div>
 </div>
