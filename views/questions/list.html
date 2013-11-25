@@ -3,7 +3,9 @@
     <h3>All Questions</h3>
     <ul>
         <li data-ng-repeat="question in questions">
-            {{question.text}}
+            <a href="#/questions/{{ question.$id }}">{{question.text}}</a>
+            [<a href="#/questions/{{ question.$id }}/edit">Edit</a>]
+            [<a  data-ng-click="removeQuestion('{{ question.$id }}')" >Remove</a>]
         </li>
     </ul>
     <br>

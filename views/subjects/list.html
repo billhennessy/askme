@@ -17,7 +17,8 @@
             <td>{{ subject.phone }}</td>
             <td><a href="mailto:{{ subject.email }}"> {{ subject.email}}</a></td>
             <td>{{ subject.organization }}</td>
-            <td><a class="btn btn-primary btn-sm" href="#/subjects/{{ subject.$id }}/edit">Edit</a> <a class="btn btn-sm btn-default" data-ng-click="removeSubject('{{ subject.$id }}')" >Remove</a></td>
+            <td><a class="btn btn-primary btn-sm" href="#/subjects/{{ subject.$id }}/edit">Edit</a>
+                <a class="btn btn-sm btn-default" data-ng-click="removeSubject('{{ subject.$id }}')" >Remove</a></td>
         </tr>
     </table>
  <!--   <ul class="unstyled">
