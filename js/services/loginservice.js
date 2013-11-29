@@ -7,7 +7,8 @@ angular.module('fantasyApp.services.login', ['fantasyApp.services.profileCreator
   .factory('loginService', ['angularFireAuth', 'profileCreator', '$location', '$rootScope',
     function(angularFireAuth, profileCreator, $location, $rootScope) {
       return {
-        login: function(email, pass, redirect, callback) {
+       // login: function(email, pass, redirect, callback) {
+          login: function(redirect, callback){
             var p = angularFireAuth.login('facebook', {
                 scope: 'email, user_likes'
        //   var p = angularFireAuth.login('password', {

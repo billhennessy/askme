@@ -20,7 +20,7 @@ angular.module('fantasyApp.services.questions', ['fantasyApp.services.firebaseRe
                     return FireRef.questions().push({
                         text: question.text,
                         options: question.options,
-                        reverse: question.reverse = ''
+                        reverse: question.reverse = false
                     }, cb).name();
                 }
             }
