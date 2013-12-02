@@ -1,10 +1,29 @@
-<div data-ng-controller="QuestionsController" data-ng-init="findOneQuestion()">
+<div data-ng-controller="QuestionsController" data-ng-init="findOneQuestion();findTests()">
 <div class="row">
     <form class="form-horizontal  col-lg-8">
         <div class="control-group" >
             <label class="control-label" for="text">Text</label>
             <div class="controls">
                 <input type="text" class="form-control input-xlarge" data-ng-model="question.text" id="text" placeholder="Text">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="test">Test</label>
+            <div class="controls">
+                <select
+                        data-ng-model="question.testId"
+                        name="test"
+                        required="required"
+                        data-ng-options="c.$id as c.name for c in tests">
+                    <option data-ng-show="noQuestions" value="">Choose a test:</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-group" >
+            <label class="control-label" for="category">Category</label>
+            <div class="controls">
+                <input type="text" class="form-control input-medium" data-ng-model="question.category" id="category" placeholder="Category">
             </div>
         </div>
         <div class="control-group col-lg-8" >
@@ -23,7 +42,7 @@
         </div>
         <div class="control-group col-lg-8 ">
             <div class="controls">
-                <button data-ng-click="createQuestion()" data-ng-show="!questionId">Create Question</button>
+                <button data-ng-click="create()" data-ng-show="!questionId">Create Question</button>
             </div>
         </div>
         <div class="control-group col-lg-8 ">

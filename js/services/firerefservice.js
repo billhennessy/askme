@@ -25,6 +25,9 @@ angular.module('fantasyApp.services.firebaseRefs', [])
                 , questions: function(){
                     return new Firebase(FBURL+'/questions');
                 }
+                , tests: function() {
+                    return new Firebase(FBURL+'/tests')
+                }
 
             }
         }])

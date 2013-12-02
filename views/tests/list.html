@@ -1,0 +1,13 @@
+<div data-ng-controller="TestsController" data-ng-init="findTests()">
+    <h2>Tests</h2>
+    <h3>All Tests</h3>
+    <ul class="unstyled">
+        <li data-ng-repeat="test in tests">
+            <a href="#/tests/{{ test.$id }}">{{test.name}}</a>
+            (<a href="#/tests/{{ test.$id }}/edit">Edit</a>)
+            (<a href="" data-ng-click="removeTest('{{ test.$id }}')" >Remove</a>)
+        </li>
+    </ul>
+    <br>
+    <a href="#/tests/create">Create a new test</a>
+</div>

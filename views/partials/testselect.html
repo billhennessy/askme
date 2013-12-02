@@ -1,0 +1,4 @@
+<select data-ng-model="strictsearch.test">
+    <option value="">All Tests</option>
+    <option data-ng-repeat="test in tests" value="{{$index}}">{{test.name}}</option>
+</select>

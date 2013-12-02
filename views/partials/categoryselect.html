@@ -1,0 +1,4 @@
+<select data-ng-model="strictsearch.category">
+    <option value="">All categories</option>
+    <option data-ng-repeat="category in categories" value="{{$index.toString()}}">{{position.abbr}}</option>
+</select>

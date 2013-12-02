@@ -4,12 +4,12 @@
 'use strict';
 
 angular.module('fantasyApp.controllers.questions', ['fantasyApp.services.questions'])
-    .controller('QuestionsController', ['$scope','$routeParams', '$location', 'angularFire', 'Questions',
-        function($scope, $routeParams, $location, angularFire, Questions) {
+    .controller('QuestionsController', ['$scope','$routeParams', '$location', 'angularFire','Tests', 'Questions',
+        function($scope, $routeParams, $location, angularFire, Tests, Questions) {
 
             $scope.question = {};
             $scope.questionId = $routeParams.questionId;
-
+            $scope.strictsearch = {};
             $scope.findQuestions = function() {
                 $scope.questions = Questions.collection();
             }
@@ -20,15 +20,16 @@ angular.module('fantasyApp.controllers.questions', ['fantasyApp.services.questio
                 }
             }
 
-            $scope.createQuestion = function() {
-                var questionId = Questions.create($scope.question, function(err) {
-                    if (!err) {
-                        $scope.question = null;
-                        $location.path('/questions/'+questionId);
-                        $scope.$apply();
-                    }
-                });
+            $scope.findTests = function () {
+                $scope.tests = Tests.collection();
             }
+            $scope.create = function() {
+                Questions.create($scope.question, $scope.auth).then(function(questionId) {
+                    $scope.question = null;
+                    $location.path('/questions/'+questionId);
+                })
+            }
+
 
             $scope.removeQuestion = function(questionId) {
                 Questions.removeQuestion(questionId);

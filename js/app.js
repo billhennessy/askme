@@ -12,6 +12,7 @@ var app = angular.module('fantasyApp',
   , 'fantasyApp.controllers.fantasyTeams'*/
   , 'fantasyApp.controllers.subjects'
   , 'fantasyApp.controllers.questions'
+  , 'fantasyApp.controllers.tests'
 
   , 'firebase', 'ui.bootstrap', 'ngRoute']
   )

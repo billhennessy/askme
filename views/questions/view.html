@@ -1,5 +1,7 @@
 <div data-ng-controller="QuestionsController" data-ng-init="findOneQuestion()">
     <h2>{{ question.text }}</h2>
+    <p><b>Question ID:</b> {{ question.testId }}</p>
+    <p><b>Category: </b>{{ question.category}} </p>
     <p ><strong>Options: </strong>{{ question.options }}</p>
     <p>Reverse Scoring: <input type="checkbox" class="checkbox" data-ng-disabled="true" data-ng-model="question.reverse"></p>
     <br>
