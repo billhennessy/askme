@@ -16,7 +16,7 @@
             <th>Action</th>
         </tr>
         <tr data-ng-repeat="question in questions | filter:search | filter:strictsearch:true ">
-            <td>{{ question.$index+1 }}. {{ question.text }}</td>
+            <td>{{ question.$index+1 }}. <a href="#/questions/{{ question.$id }}">{{ question.text }}</a></td>
             <td>{{ question.category}}</td>
             <!--<td>{{ question.testId }}</td>-->
             <td>{{ question.reverse }}</td>
