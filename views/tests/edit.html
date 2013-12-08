@@ -3,9 +3,26 @@
         <div class="control-group">
             <label class="control-label" for="name">Name</label>
             <div class="controls">
-                <input type="text" data-ng-model="test.name" id="name" placeholder="Name">
+                <input type="text" class="form-control input-medium" data-ng-model="test.name" id="name" placeholder="Name">
             </div>
         </div>
+
+        <div>
+            <h3>Categories</h3>
+           <ul class="list-unstyled">
+               <li data-ng-repeat="category in test.categories">
+                   {{category}} <span class="col icon-remove" data-ng-click="removeCategory({{$index}})">remove</span>
+
+               </li>
+           </ul>
+
+            </div>
+        <div>
+
+            <input type="text" class="form-control input-medium" id="category" data-ng-model="newCategory">
+            <button class="btn-mini" value="add category" data-ng-click="addCategory({{testId}})">add category</button>
+        </div>
+
         <div class="control-group">
             <div class="controls">
                 <button data-ng-click="createTest()" data-ng-show="!testId">Create Test</button>

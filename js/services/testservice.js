@@ -19,8 +19,15 @@ angular.module('fantasyApp.services.tests', ['fantasyApp.services.firebaseRefs']
                 , create: function(test, cb) {
                     return FireRef.tests().push({
                         name: test.name,
-                        questions: []
+                        categories: test.categories,
+                        questions: test.questions
                     }, cb).name();
                 }
+
+
+             , addCategories: function(testId, newCategory) {
+                    return FireRef.tests(testId).push({categories:['0', newCategory]});
+                }
+
             }
         }])

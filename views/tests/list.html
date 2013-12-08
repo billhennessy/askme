@@ -3,7 +3,7 @@
     <h3>All Tests</h3>
     <ul class="unstyled">
         <li data-ng-repeat="test in tests">
-            <a href="#/tests/{{ test.$id }}">{{test.name}}</a>
+            <a href="#/tests/{{ test.$id }}">{{test.$id}}</a>
             (<a href="#/tests/{{ test.$id }}/edit">Edit</a>)
             (<a href="" data-ng-click="removeTest('{{ test.$id }}')" >Remove</a>)
         </li>

@@ -1,5 +1,16 @@
 <div data-ng-controller="TestsController" data-ng-init="findOneTest()">
-    <h2>{{ test.name }}</h2>
+    <h2>{{ test.display }}</h2>
     <br>
+    <h3>Categories</h3>
+    <ul>
+        <li data-ng-repeat="category in test.categories">{{category}}</li>
+    </ul>
+
+   <br>
+    <h3>Questions <span class="glyphicon glyphicon-eye-open"></span>  <input type="checkbox" class="input-large" id="checked" data-ng-model="checked"></h3>
+    <ul class="unstyled" data-ng-show="checked">
+        <li class="list-unstyled" data-ng-repeat="question in test.questions">
+            <a href="#/tests/{{ tests.$id }}/edit"><span class="glyphicon glyphicon-edit"></span> {{ question.text }}</a></li>
+    </ul>
     <a href="#/tests">View all tests</a>
 </div>
