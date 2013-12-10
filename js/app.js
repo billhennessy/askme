@@ -6,10 +6,7 @@ var app = angular.module('fantasyApp',
   , 'fantasyApp.controllers.header'
   , 'fantasyApp.controllers.signin'
   , 'fantasyApp.controllers.signup'
- /* , 'fantasyApp.controllers.nfl'
-  , 'fantasyApp.controllers.leagues'
-  , 'fantasyApp.controllers.players'
-  , 'fantasyApp.controllers.fantasyTeams'*/
+
   , 'fantasyApp.controllers.subjects'
   , 'fantasyApp.controllers.questions'
   , 'fantasyApp.controllers.tests'
